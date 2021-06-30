@@ -137,7 +137,7 @@ function Banana() {
     randomPosition = random(150, 200)
     banana = createSprite(500, randomPosition, 10, 10);
     banana.addImage("image", bananaImage);
-    banana.scale = 0.3;
+    banana.scale = 0.1;
     banana.velocityX = -10;
     
     FoodGroup.add(banana);
@@ -146,10 +146,10 @@ function Banana() {
 
 function Obstacle() {
   if (frameCount % 300 === 0) {
-    obstacle = createSprite(500, 400, 10, 10);
+    obstacle = createSprite(500, 300, 10, 10);
     obstacle.addImage("obstacle", obstaceImage);
     obstacle.velocityX = -100;
-    obstacle.scale = 0.2;
+    obstacle.scale = 0.5;
     
     obstacleGroup.add(obstacle);
   }
