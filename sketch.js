@@ -101,7 +101,7 @@ function draw() {
       ground.x = ground.x / 2;
     }
      if (keyDown("Space") && monkey.y > 400) {
-      monkey.velocityY = -15
+      monkey.velocityY = -10
     }
   
     
@@ -146,9 +146,9 @@ function Banana() {
 
 function Obstacle() {
   if (frameCount % 300 === 0) {
-    obstacle = createSprite(500, 390, 10, 10);
+    obstacle = createSprite(500, 310, 10, 10);
     obstacle.addImage("obstacle", obstaceImage);
-    obstacle.velocityX = -10;
+    obstacle.velocityX = -5;
     obstacle.scale = 0.3;
     
     obstacleGroup.add(obstacle);
