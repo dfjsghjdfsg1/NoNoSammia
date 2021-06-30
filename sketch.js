@@ -146,7 +146,7 @@ function Banana() {
 
 function Obstacle() {
   if (frameCount % 300 === 0) {
-    obstacle = createSprite(500, 300, 10, 10);
+    obstacle = createSprite(500, 390, 10, 10);
     obstacle.addImage("obstacle", obstaceImage);
     obstacle.velocityX = -100;
     obstacle.scale = 0.5;
