@@ -100,10 +100,10 @@ function draw() {
     if (ground.x < 0) {
       ground.x = ground.x / 2;
     }
-    
-    if (keyDown("Space") && monkey.collide(ground)) {
+     if (keyDown("Space") && monkey.y > 400) {
       monkey.velocityY = -15
     }
+  
     
     
     if (monkey.isTouching(FoodGroup)) {
