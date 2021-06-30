@@ -77,7 +77,7 @@ function draw() {
   if (gamestate === "play") {
     Banana();
     
-    ground.velocityX = ground.velocityX - (survivalTime / 100) * 10;
+    ground.velocityX = ground.velocityX - (survivalTime / 100) * 50;
     
     obstacleGroup.velocityX = obstacleGroup.velocityX - (survivalTime / 100) * 10;
     FoodGroup.velocityX = FoodGroup.velocityX - (survivalTime / 100) * 10;
@@ -93,9 +93,9 @@ function draw() {
     
     survivalTime = survivalTime + Math.round(frameRate() / 30);
     
-    monkey.velocityY = monkey.velocityY + 0.8;
+    monkey.velocityY = monkey.velocityY + 0.12;
     
-    bimage.velocityX=-5
+    bimage.velocityX=-3
     
     if (ground.x < 0) {
       ground.x = ground.x / 2;
@@ -135,8 +135,8 @@ function Banana() {
     randomPosition = random(150, 200)
     banana = createSprite(500, randomPosition, 10, 10);
     banana.addImage("image", bananaImage);
-    banana.scale = 0.1;
-    banana.velocityX = -8;
+    banana.scale = 0.3;
+    banana.velocityX = -10;
     
     FoodGroup.add(banana);
   }
@@ -146,7 +146,7 @@ function Obstacle() {
   if (frameCount % 300 === 0) {
     obstacle = createSprite(500, 330, 10, 10);
     obstacle.addImage("obstacle", obstaceImage);
-    obstacle.velocityX = -8;
+    obstacle.velocityX = -100;
     obstacle.scale = 0.2;
     
     obstacleGroup.add(obstacle);
