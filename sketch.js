@@ -93,7 +93,7 @@ function draw() {
     
     survivalTime = survivalTime + Math.round(frameRate() / 30);
     if(key){
-    monkey.velocityY = monkey.velocityY + 0.12;
+    monkey.velocityY = monkey.velocityY + 0.8;
     }    
     bimage.velocityX=-3
     
