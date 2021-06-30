@@ -92,18 +92,19 @@ function draw() {
     ground.velocityX=-10
     
     survivalTime = survivalTime + Math.round(frameRate() / 30);
-    
+    if(key){
     monkey.velocityY = monkey.velocityY + 0.12;
-    
+    }    
     bimage.velocityX=-3
     
     if (ground.x < 0) {
       ground.x = ground.x / 2;
     }
     
-    if (keyDown("Space") && monkey.y > 250) {
+    if (keyDown("Space") && monkey.collide(ground)) {
       monkey.velocityY = -15
     }
+    
     
     if (monkey.isTouching(FoodGroup)) {
       bananaScore = bananaScore + 1;
